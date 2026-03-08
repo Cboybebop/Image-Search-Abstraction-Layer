@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Search Abstraction Layer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="bg-layer"></div>
+    <main class="layout">
+      <section class="panel hero-panel">
+        <p class="eyebrow">Image Search Abstraction Layer</p>
+        <h1>Search images by keyword with an API-first workflow.</h1>
+        <p class="subtitle">
+          Use the form for a visual client, or call API routes directly: <code>/query/&lt;search&gt;?page=2</code> and
+          <code>/recent/</code>.
+        </p>
+
+        <form id="searchForm" class="search-form" autocomplete="off">
+          <label>
+            Search term
+            <input id="searchInput" name="search" type="text" placeholder="lolcats funny" required />
+          </label>
+          <label>
+            Page
+            <input id="pageInput" name="page" type="number" min="1" value="1" required />
+          </label>
+          <button type="submit">Search</button>
+        </form>
+
+        <p id="queryPreview" class="query-preview"></p>
+      </section>
+
+      <section class="panel content-panel">
+        <div class="section-header">
+          <h2>Results</h2>
+          <p id="statusText" class="status-text">Submit a search to get started.</p>
+        </div>
+        <div id="resultsGrid" class="results-grid"></div>
+      </section>
+
+      <aside class="panel recent-panel">
+        <div class="section-header">
+          <h2>Recent Searches</h2>
+        </div>
+        <ul id="recentList" class="recent-list"></ul>
+      </aside>
+    </main>
+
+    <template id="resultTemplate">
+      <article class="result-card">
+        <a class="image-link" target="_blank" rel="noreferrer noopener">
+          <img loading="lazy" alt="" />
+        </a>
+        <div class="result-meta">
+          <h3></h3>
+          <p></p>
+          <a class="visit-link" target="_blank" rel="noreferrer noopener">Open page</a>
+        </div>
+      </article>
+    </template>
+
+    <script src="/app.js" defer></script>
+  </body>
+</html>
+

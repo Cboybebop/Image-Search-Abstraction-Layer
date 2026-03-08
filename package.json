@@ -1,0 +1,19 @@
+{
+  "name": "image-search-abstraction-layer",
+  "version": "1.0.0",
+  "description": "Full-stack JavaScript image search abstraction layer",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [
+    "image-search",
+    "freecodecamp",
+    "javascript",
+    "full-stack"
+  ],
+  "author": "",
+  "license": "MIT"
+}
+
