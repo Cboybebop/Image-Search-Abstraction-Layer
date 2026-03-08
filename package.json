@@ -4,6 +4,7 @@
   "description": "Full-stack JavaScript image search abstraction layer",
   "main": "server.js",
   "scripts": {
+    "build": "node -e \"console.log('No build step required')\"",
     "start": "node server.js",
     "dev": "node --watch server.js"
   },
