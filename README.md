@@ -1,5 +1,5 @@
 # Image Search Abstraction Layer
-
+![Image Search Abstraction Layer](imagesearch.jpg)
 A full-stack JavaScript app that exposes an image-search API and a modern UI (dark green theme).
 
 ## Run
